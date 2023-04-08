@@ -1,0 +1,174 @@
+/* Styling for the landing page */
+html {
+    font-size: 14px;
+}
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: "IBM Plex Mono", monospace;
+    font-weight: 400;
+    background: #13192c;
+    color: #ffffff;
+    /*font-family: 'Khula', sans-serif;*/
+    /*font-family: 'Alegreya Sans SC', sans-serif;*/
+    /* Background image is centered vertically and horizontally. */
+    /*background-position: center center;*/
+    /*background-repeat: no-repeat;*/
+    /* Background image is fixed in viewport so that it doesn't move when height*/
+    /*of the content is greater than the height of the image */
+    /*background-attachment: fixed;*/
+    /*background-size: cover;*/
+    /*background-color: #DBE3F0;*/
+}
+
+/* html, body, main {
+  height: 100%;
+} */
+main {
+    padding: 5vh 5vw;
+    font-size: 1.25rem;
+}
+
+pre {
+    display: block;
+    margin-top: 0;
+    margin-bottom: 1rem;
+    overflow: hidden;
+    font-size: 0.875em;
+    color: #476b90;
+}
+
+.intro {
+    font-size: 2rem;
+    padding-bottom: 1.5rem;
+}
+
+main * {
+    line-height: 1.5;
+}
+
+h1,
+h2 {
+    font-weight: 400;
+}
+
+h1 {
+    font-size: 3rem;
+    line-height: 1;
+    padding-bottom: 2rem;
+}
+
+.comment {
+    color: #476c97;
+    font-weight: 400;
+    line-height: 1.2;
+}
+
+.indent {
+    padding-left: 3ch;
+    border-left: 1px solid rgba(71, 108, 151, 0.25);
+}
+
+.string {
+    color: #2eccb0;
+}
+
+.declaration {
+    color: #9a59c5;
+}
+
+a {
+    position: relative;
+    text-decoration: none;
+    color: #2eccb0;
+}
+
+a:hover,
+a:focus {
+    color: #b9aa1f;
+}
+
+a::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 1px;
+    bottom: 0;
+    left: 0;
+    background-color: #2eccb0;
+    visibility: hidden;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: all 0.3s ease-in-out 0s;
+}
+
+a:hover::before {
+    visibility: visible;
+    transform: scaleX(1);
+}
+
+punctuation {
+    color: #9a59c5;
+}
+
+/* animation styles goes here */
+.bg-animate {
+    position: absolute;
+    user-select: none;
+    pointer-events: none;
+    z-index: 10;
+    opacity: 0.16;
+    top: 50%;
+}
+
+.bg-animate-left-1 {
+    left: 35%;
+    animation: bgAnimate 75s linear 0s infinite forwards;
+}
+
+.bg-animate-left-2 {
+    right: 45%;
+    top: 10%;
+    animation: bgAnimate 75s linear 0s infinite reverse;
+}
+
+.bg-animate-left-3 {
+    right: 30%;
+    bottom: 30%;
+    animation: bgAnimate 75s linear 0s infinite reverse;
+}
+
+.bg-animate-left-4 {
+  top: 80%;
+  animation: bgAnimate 75s linear 0s infinite reverse;
+  left: 80%;
+}
+
+.bg-animate-left-5 {
+  top: 80%;
+  animation: bgAnimate 75s linear 0s infinite reverse;
+  left: 15%;
+}
+.bg-animate-left-6 {
+  top: 100%;
+  animation: bgAnimate 75s linear 0s infinite reverse;
+  right: 45%;
+}
+
+@keyframes bgAnimate {
+    0%,
+    100% {
+        transform: rotate(0) translate3d(0, 0, 0);
+    }
+    33% {
+        transform: rotate(375deg) translate3d(20px, -150px, 0);
+    }
+    66% {
+        transform: rotate(375deg) translate3d(-20px, 150px, 0);
+    }
+}
